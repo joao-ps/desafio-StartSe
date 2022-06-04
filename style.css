@@ -1,0 +1,336 @@
+/* IMPORTANDO AS FONTS PRINCIPAIS DA PÁGINA */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;900&display=swap');
+
+@font-face {
+    font-family: 'KGSummer';
+    src: url(fonts/KGSummerSunshine.ttf);
+}
+@font-face {
+    font-family: 'KGSummerSunshine';
+    src: url(fonts/KGSummerSunshineBlackout.ttf);
+}
+@font-face {
+    font-family: 'KGSummerShadow';
+    src: url(fonts/KGSummerSunshineShadow.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+/* CABEÇALHO DA PÁGINA */
+header{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imgs/My\ project.png);
+    background-size: 700px 600px;
+    background-repeat: no-repeat;
+    background-position: center right; 
+    z-index: 1;
+}
+header::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: -moz-linear-gradient(top left, #0FC2C0 65%, azure 40%);
+    opacity: .1;
+    z-index: -1;
+}
+
+#logo{
+    font-family: 'KGSummerShadow';
+    font-size: 3rem;
+    color: black;
+}
+
+#menu{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+header ul{
+    list-style-type: none;
+    display: flex;
+}
+header ul li{
+    padding: 0 20px;
+}
+header ul li a{
+    text-decoration: none;
+    color: #023535;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family: 'KGSummerSunshine';
+}
+header .conteudo-header{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+}
+header .conteudo-header a{
+    font-size: 5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'KGSummerSunshine';
+    color: #023535;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+img{
+    width: 200px;
+}
+
+
+/* CONTEUDO PRINCIPAL DA PÁGINA */
+main{
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+}
+main .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+main h1{
+    font-size: 4rem;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+    text-align: center;
+}
+article{
+    width: 85%;
+}
+article section h2{
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+article section p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+article section .conteudo-txt{
+    padding: 25px 35px;
+    background-color: #f2be2259;
+}
+main details summary span{
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+main details ul{
+    list-style-position: inside;
+    font-size: 1.2rem;
+}
+main details div{
+    columns: 3;
+}
+.grid-main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px;
+}
+.grid-main .conteudo-img{
+    background-image: url(imgs/laptop-2557574_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* CARDS DO MAIN */
+.section-cards{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 100px;
+    position: relative;
+}
+.section-cards::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #A3AB78;
+    opacity: .5;
+    z-index: -1;
+}
+.titulo-cards{
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.container-cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cards{
+    display: grid;
+    width: 270px;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 250px;
+    margin: 0 20px;
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    border-end-end-radius: 25px;
+    border-end-start-radius: 25px;
+}
+div.card-txt h2{
+    padding-top: 5px;
+    text-align: center;
+    font-size: 3rem;
+}
+div.card-txt p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+div.card-txt button{
+    width: 150px;
+    display: block;
+    margin: 40px auto;
+    padding: 10px 0;
+    border-radius: 25px;
+    border: 2px solid black;
+    background-color: white;
+    text-transform: capitalize;
+    font-weight: bolder;
+    cursor: pointer;
+}
+div.card-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #023535c0;
+}
+.git{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/62/Git-logo-orange.svg);
+}
+.javascript{
+    background-image: url(https://freesvg.org/img/1486641506.png);
+}
+.node{
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png);
+}
+
+footer{
+    margin-top: 150px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: 'KGSummer';
+}
+
+/* RESPONSIVIDADE */
+@media screen  and (max-width: 1050px){
+    header{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center; 
+    }
+    #menu{
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .grid-main{
+        display: grid;
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: 400px 250px; 
+        grid-template-areas: 
+        ". txt txt ."
+        ". img img .";
+        margin-bottom: 25px;
+    }
+    .conteudo-txt{
+        grid-area: txt;
+    }
+    .grid-main .conteudo-img{
+        grid-area: img;
+        background-position: top;
+    }
+    main details div{
+        columns: 4;
+    }
+}
+
+
+@media screen and (max-width: 915px){
+    .container-cards{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }   
+    .cards{
+        margin-bottom: 35px;
+        grid-template-rows: 150px 320px;
+    }
+    div.card-txt button{
+        margin: 20px auto;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    article{
+        width: 90%;
+    }
+
+    .grid-main{
+        display: grid;
+        grid-template-columns: 0% 50% 50% 0%;
+        grid-template-rows: 450px 200px; 
+        grid-template-areas: 
+        ". txt txt ."
+        ". img img .";
+        margin-bottom: 25px;
+    }
+}
+
+
+@media screen and (max-width: 530px){
+    header ul li a{
+        font-size: 1.5rem;
+    }
+    header .conteudo-header{
+        align-items: center;
+    }
+    header img{
+        margin-left: 200px;
+    }
+}
